@@ -33,9 +33,9 @@ public class KitManager {
 			ItemMeta sword_meta = sword.getItemMeta();
 			sword_meta.setDisplayName(ChatColor.GRAY+"Vampire Sword "+ChatColor.YELLOW+"(Lvl.1)");
 			//Enchantments ideas
-			lore.add(ChatColor.RED+"Strengh");
-			lore.add(ChatColor.RED+"Blood");
-			lore.add(ChatColor.RED+"Potion");
+			lore.add(ChatColor.WHITE+"* "+ChatColor.RED+"Strengh II");
+			lore.add(ChatColor.WHITE+"* "+ChatColor.RED+"Blood IV");
+			lore.add(ChatColor.WHITE+"* "+ChatColor.RED+"Potion V");
 			sword_meta.setLore(lore);
 			sword.setItemMeta(sword_meta);
 			inv.setItem(0, sword);
