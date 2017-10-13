@@ -7,6 +7,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 
 import net.blizmc.rpg.BlizRPG;
+import net.blizmc.rpg.utils.KitManager;
 import net.blizmc.rpg.utils.classes.ClassManager;
 
 public class PlayerLogin implements Listener{
@@ -29,6 +30,10 @@ public class PlayerLogin implements Listener{
 			//Player has a class
 			String class_name = ClassManager.getInstance().get_class_name(p);
 			ClassManager.getInstance().set_player_prefix(p, class_name);
+			
+			//Testing
+			p.getInventory().clear();
+			KitManager.getInstance().give_kit(p);
 		}
 	}
 	
