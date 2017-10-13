@@ -54,17 +54,44 @@ public class PlayerInventoryClick implements Listener{
 			
 			//Knight Clicked
 			if(clicked_item.getType() == Material.IRON_CHESTPLATE) {
+				ClassManager.getInstance().set_class(p, Classes.KNIGHT);
+				p.closeInventory();
 				
+				String class_name = ClassManager.getInstance().get_class_name(p);
+				ClassManager.getInstance().set_player_prefix(p, class_name);
+				
+				ChatFormat.getInstance().npc_message(p, "King", "Hello, "+p.getName()+"!");
+				ChatFormat.getInstance().npc_message(p, "King", "Let me teleport you to the our kingdom.");
+				//Add some cool effects
+				p.teleport(new Location(Bukkit.getWorld("world"), 1, 70, 1));
 			}
 			
 			//Orc Clicked
 			if(clicked_item.getType() == Material.STONE_AXE) {
+				ClassManager.getInstance().set_class(p, Classes.ORC);
+				p.closeInventory();
 				
+				String class_name = ClassManager.getInstance().get_class_name(p);
+				ClassManager.getInstance().set_player_prefix(p, class_name);
+				
+				ChatFormat.getInstance().npc_message(p, "Orc Leader", "Hello, "+p.getName()+"!");
+				ChatFormat.getInstance().npc_message(p, "Orc Leader", "Let me teleport you to the orc camp.");
+				//Add some cool effects
+				p.teleport(new Location(Bukkit.getWorld("world"), 1, 70, 1));
 			}
 			
 			//Elf Clicked
 			if(clicked_item.getType() == Material.STICK) {
+				ClassManager.getInstance().set_class(p, Classes.ELF);
+				p.closeInventory();
 				
+				String class_name = ClassManager.getInstance().get_class_name(p);
+				ClassManager.getInstance().set_player_prefix(p, class_name);
+				
+				ChatFormat.getInstance().npc_message(p, "Elf Queen", "Hello, "+p.getName()+"!");
+				ChatFormat.getInstance().npc_message(p, "Elf Queen", "Let me teleport you to the elf camp.");
+				//Add some cool effects
+				p.teleport(new Location(Bukkit.getWorld("world"), 1, 70, 1));
 			}
 		}
 	}
