@@ -1,0 +1,4 @@
+name: BlizRPG
+version: 0.1
+description: A awsome mmorpg plugin.
+main: net.blizmc.rpg.BlizRPG
