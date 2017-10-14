@@ -7,6 +7,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import net.blizmc.rpg.listeners.player.PlayerInventoryClick;
 import net.blizmc.rpg.listeners.player.PlayerLogin;
 import net.blizmc.rpg.utils.ConfigManager;
+import net.blizmc.rpg.utils.NPCManager;
 import net.blizmc.rpg.utils.UserFiles;
 import net.blizmc.rpg.utils.classes.ClassManager;
 
@@ -37,6 +38,8 @@ public class BlizRPG extends JavaPlugin{
 		ClassManager.getInstance().onEnable();
 		
 		register_listeners();
+		
+		NPCManager.getInstance().load_npc_list();
 	}
 	
 	@Override
